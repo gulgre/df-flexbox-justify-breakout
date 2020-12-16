@@ -1,0 +1,34 @@
+/*general element styling for colors and margins and padding -- you know, to make it pretty */
+.element {
+  background-color:tomato;
+  margin: 2px;
+  padding: 3px 10px;
+  align-content:center;  
+  text-align: center;    
+}
+
+.element.but {
+  background-color:lightblue;
+}
+
+/*top example, left aligned is the norm, with one element breaking off to be on the right*/
+.left-aligned-container {
+  display:flex;  
+  justify-content: flex-start;
+}
+
+.left-aligned-container > .but.right-aligned.element {    
+  margin-left:auto; /*if you want an item to break free and be on the right hand side  */
+  /*it's important to note, ORDER IS IMPORTANT. If this element is not LAST in the container, everything else will align to the RIGHT after it.*/
+}
+
+/*bottom example, right aligned is the norm, with one element breaking off to be on the left*/
+.right-aligned-container {
+  display:flex;  
+  justify-content: flex-end;
+}
+
+.right-aligned-container > .but.left-aligned.element {   
+  margin-right:auto; /*if you want an item to break free and be on the right hand side  */
+  /*it's important to note, ORDER IS IMPORTANT. If this element is not FIRST in the container, everything else will align to the LEFT after it.*/
+}
